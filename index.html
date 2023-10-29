@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação HTML</title>
+</head>
+<body>
+    <img width="150" src="htmlg5.jpeg" alt="Imagem do símbolo HTML5">
+    <h1 id="inicio">Módulo 1 - Primeiros passos com HTML</h1>
+    <hr>
+    <h2>Índice</h2>
+    <ul>
+        <li><a href="#requisicao-http">Requisição <strong>HTTP</strong></a></li>
+        <li><a href="#live-server">Entendendo Comunicação <strong>Client x Server</strong></a></li>
+        <li><a href="#estrutura-html">Como é uma <strong>estrutura básica de um HTML?</strong></a></li>
+        <li><a href="#tags">Tipos de <strong>TAGS</strong></a></li>
+        <li><a href="#referencias">Referências</a></li>
+    </ul>
+    <h2 id="requisicao-http">Requisição HTTP</h2>
+    <small><a href="#inicio">Voltar</a></small>
+    <ol>
+        <li><i>O que é HTTP request?</i></li>
+        <p>HTTP request, ou requisição HTTP, é um dos principais conceitos da arquitetura da World Wide Web. É um protocolo utilizado para solicitar a transferência de dados entre um cliente (geralmente um navegador web) e um servidor web. Essa solicitação é feita por meio de uma URL (Uniform Resource Locator) e é composta por diferentes elementos, como o método HTTP, o cabeçalho e o corpo da requisição.</p>
+        <li><i>Métodos HTTP</i></li>
+        <p>Existem diferentes métodos HTTP que podem ser utilizados em uma requisição. Alguns dos mais comuns são:</p>
+        <p><strong>GET:</strong> utilizado para solicitar um recurso específico do servidor. É o método mais comum e é utilizado quando o cliente deseja apenas obter informações do servidor.</p>
+        <p><strong>POST:</strong> utilizado para enviar dados ao servidor para que sejam processados. É comumente utilizado em formulários web, onde os dados inseridos pelo usuário são enviados para o servidor para serem armazenados ou processados de alguma forma.</p>
+        <p><strong>PUT:</strong> utilizado para atualizar um recurso específico no servidor. É comumente utilizado em APIs RESTful para atualizar informações em um banco de dados.</p>
+        <p><strong>DELETE:</strong> utilizado para remover um recurso específico do servidor. Assim como o método PUT, é comumente utilizado em APIs RESTful.</p>
+        <p><strong>HEAD:</strong> utilizado para obter apenas os cabeçalhos de uma resposta, sem o corpo da mensagem. É útil para verificar se um recurso existe ou para obter informações sobre ele sem baixar todo o conteúdo.</p>
+        <p><strong>OPTIONS: </strong>utilizado para obter informações sobre as opções de comunicação disponíveis para um recurso específico. É útil para verificar quais métodos HTTP são suportados por um servidor.</p>
+        <p><strong>TRACE:</strong> utilizado para obter informações sobre como uma requisição é tratada por servidores intermediários. É útil para fins de depuração e diagnóstico.</p>
+        <li><i>Cabeçalho da requisição</i></li>
+        <p>O cabeçalho da requisição é uma parte importante de uma requisição HTTP. Ele contém informações adicionais sobre a requisição, como o tipo de conteúdo que está sendo enviado, a codificação utilizada, o tamanho do conteúdo, entre outros.</p>
+        <p>Alguns dos cabeçalhos mais comuns são:</p>
+        <p><strong>User-Agent:</strong> identifica o software utilizado para fazer a requisição. É útil para os servidores identificarem o tipo de dispositivo ou navegador que está acessando o recurso.</p>
+        <p><strong>Content-Type:</strong> especifica o tipo de conteúdo que está sendo enviado no corpo da requisição. Pode ser um tipo de mídia, como “application/json” ou “text/html”, por exemplo.</p>
+        <p><strong>Content-Length:</strong> especifica o tamanho do conteúdo que está sendo enviado no corpo da requisição. É útil para o servidor saber quanto tempo levará para processar a requisição.</p>
+        <p><strong>Authorization:</strong> utilizado para enviar informações de autenticação ao servidor. É comumente utilizado em requisições que requerem autenticação, como login e acesso a recursos protegidos.</p>
+        <p><strong>Cookie:</strong> utilizado para enviar informações de sessão ao servidor. É comumente utilizado para manter o estado da sessão do usuário em requisições subsequentes.</p>
+        <li><i>Corpo da requisição</i></li>
+        <p>O corpo da requisição é a parte onde os dados são enviados para o servidor. Ele pode conter diferentes tipos de dados, dependendo do método HTTP utilizado e do tipo de conteúdo especificado no cabeçalho da requisição.</p>
+        <p>Alguns exemplos de dados que podem ser enviados no corpo da requisição são:</p>
+        <p><strong>Formulários:</strong> quando o método POST é utilizado, é comum enviar os dados de um formulário no corpo da requisição. Os dados são enviados em pares chave-valor, onde a chave é o nome do campo do formulário e o valor é o valor inserido pelo usuário.</p>
+        <p><strong>JSON:</strong> o formato JSON (JavaScript Object Notation) é amplamente utilizado para enviar e receber dados em requisições HTTP. É um formato leve e de fácil leitura, o que o torna ideal para comunicação entre sistemas.</p>
+        <p><strong>Arquivos: </strong> é possível enviar arquivos no corpo da requisição utilizando o método POST e especificando o tipo de conteúdo como “multipart/form-data”. Isso é comumente utilizado em formulários de upload de arquivos.</p>
+        <li><i>Conclusão</i></li>
+        <p>Em resumo, uma requisição HTTP é uma solicitação feita por um cliente a um servidor web para transferir dados. Ela é composta por diferentes elementos, como o método HTTP, o cabeçalho e o corpo da requisição. Os métodos HTTP definem a ação que deve ser realizada pelo servidor, enquanto o cabeçalho e o corpo da requisição fornecem informações adicionais e os dados a serem enviados. Compreender o funcionamento das requisições HTTP é fundamental para o desenvolvimento de aplicações web e para a otimização de sites para os mecanismos de busca.</p>
+    </ol>
+    <h2 id="live-server">Entendendo Comunicação Client x Server</h2>
+    <small><a href="#inicio">Voltar</a></small>
+    <p><strong>HTTP (Hypertext Transfer Protocol)</strong> é o protocolo base para as aplicações web e clientes (como aplicativos mobile, entre outros) que se conectam a web APIs. Ele permite a comunicação entre clientes e servidores através da internet.</p>
+    <ul>
+        <li><strong>Cliente</strong></li>
+        <p>É o cliente quem sempre inicia a comunicação com o servidor.            
+            O cliente mais conhecido é o navegador.            
+            Quando acessamos um site pelo navegador, uma requisição é disparada pela internet para o computador no qual esse site está hospedado. pós enviar uma requisição, o user-agent aguarda até que haja uma resposta do servidor e então a comunicação se encerra.
+            Para obter um novo recurso do servidor o cliente deve iniciar uma nova requisição.</p>
+            <li><strong>Servidor</strong></li>
+            <p>O papel do servidor web é receber uma requisição e devolver uma resposta para o cliente.
+                Geralmente o servidor não envia dados se o cliente não disparar primeiro uma requisição.
+                O servidor é um ou mais computadores com um único endereço como http://www.devmedia.com.br. Nestes computadores podem ser hospedados documentos, imagens, áudio, vídeo, etc.
+                Geralmente o servidor também hospeda programas que atendem as requisições dos clientes e as processam. Chamamos esses programas de web server, ou servidor web.
+                É com um web server que nos comunicamos, sendo o computador no qual ele está instalado parte da infraestrutura que o conecta a internet.
+                O web server geralmente é capaz de executar aplicações escritas em linguagens como PHP, C#, Java, etc. Por exemplo, um servidor executando o PHP pode delegar a esse programa a tarefa de atender as requisições criando páginas HTML a partir de scripts escritos nessa linguagem.</p>
+    </ul>
+    <h2 id="estrutura-html">Como é uma estrutura básica de um HTML?</h2>
+    <small><a href="#inicio">Voltar</a></small>
+    <p>A estrutura básica de um HTML é composta por:</p>
+    <p>Linha 1: a instrução DOCTYPE deve ser sempre a primeira a aparecer em uma página HTML para indicar ao browser qual versão da linguagem usada. Nesse caso, estamos trabalhando com a HTML5, versão na qual a declaração do DOCTYPE é bastante simples, como podemos ver na listagem;
+        Linhas 2 e 10: abertura e fechamento da tag html, que delimita o documento. Sendo assim, todas as demais tags da página devem estar nesse espaço;
+        Linhas 3 e 6: abertura e fechamento da tag head, que define o cabeçalho do documento. O conteúdo nesse espaço não é visível no browser, mas contém instruções sobre seu conteúdo e comportamento. Dentro dessa tag, por exemplo, podem ser inseridas folhas de estilo e scripts;
+        Linha 4: a tag meta, nesse caso, especifica qual conjunto de caracteres (character set ou charset) será usado para renderizar o texto da página. O UTF-8 contém todos os caracteres dos padrões Unicode e ASCII, sendo, portanto, o mais utilizado em páginas web. A mesma tag meta, porém com outros atributos, pode ser utilizada para outros fins, como na SEO (Search Engine Optimization);
+        Linha 5: a tag title define o título da página, aquele que aparece na janela/aba do navegador;
+        Linhas 7 e 9: abertura e fechamento da tag body, marcando o espaço no qual deve estar contido o conteúdo visual da página. As demais tags que representam texto, botões etc. devem ser adicionadas nesse intervalo;
+        Linha 8: nessa linha podemos observar a sintaxe para adição de comentários em HTML. Esse trecho não é renderizado pelo browser.
+        Para desenvolver páginas com HTML basicamente precisamos de um editor de texto, como o Bloco de Notas do Windows, Nano e Emacs no Linux, entre vários outros. Há, ainda, editores com opções avançadas, como recursos de syntax hilghligt e autocomplete, como Sublime Text, Atom, Brackets e Visual Studio Code, que podem ser usados para editar documentos HTML.
+        Independentemente do editor utilizado, podemos simplesmente copiar o código da Listagem 1 para um deles e salvar o arquivo com extensão .html. Em seguida, podemos abrir esse arquivo em um browser.</p>
+    <h2 id="tags">Tipos de TAGS</h2>
+    <small><a href="#inicio">Voltar</a></small>
+    <p>Um documento HTML é composto por tags, as quais possuem um nome e aparecem entre os sinais < e >, como vimos na Listagem 1, por exemplo, em <html> e <head>. Naquele exemplo também vimos que algumas tags precisam ser abertas e fechadas, como em <body> </body>. Nesse caso, a tag de fechamento deve conter a barra / antes do nome. Outras, porém, não precisam ser fechadas, como a tag <meta>. Nesses casos, a adição da barra / no final da própria tag, como vemos na Linha 4 da Listagem 1 é opcional.</p>
+    <p>Outro aspecto importante da linguagem é que ela é case insensitive, ou seja, não leva em consideração a diferença entre letras maiúsculas e minúsculas. No entanto, o uso apenas de letras minúsculas tem sido utilizado como padrão pelos desenvolvedores.</p>
+    <p>Além dessas características, as tags também possuem atributos, como vemos na Linha 4 da Listagem 1, na qual a tag meta possui o atributo charset=”UTF-8”. Essas propriedades definem algumas características adicionais de cada tag e em alguns casos são obrigatórias. Seus valores devem aparecer entre aspas duplas, como no exemplo acima, ou em aspas simples, caso o próprio valor contenha aspas duplas.</p>
+    <ol>
+        <li><i>Cabeçalhos do HTML</i></li>
+        <p>Cabeçalhos são normalmente utilizados para identificar páginas e seções e possuem aparência diferenciada do restante do texto. No HTML há seis níveis de cabeçalhos/títulos que podem ser utilizados por meio das tags h1, h2, h3, h4, h5 e h6, sendo h1 o maior/mais relevante e h6 o menor/menos relevante.</p>
+        <li><i>Parágrafos no HTML</i></li>
+        <p>Parágrafos de texto são gerados na HTML por meio das tags p. <p>
+        <li><i>Imagens no HTML</i></li>
+        <p>A inserção de imagens em uma página HTML pode ser feita por meio da tag img, que recebe no atributo src o endereço do arquivo a ser carregado. Além desse, outros dois atributos importantes são o alt, que indica um texto alternativo que será exibido caso o arquivo não possa ser carregado, e title, que indica o texto que aparecerá como tooltip ao passar o mouse sobre a figura.</p>
+        <p>No caso da tag img, ainda temos as tags figure e figcaption.</p>
+        <li><i>Links no HTML</i></li>
+        <p>Links são normalmente utilizados para direcionar o usuário para outras páginas, ou para outras partes da mesma página. Nos dois casos, utilizamos a tag a, que possui o atributo href no qual indicamos o destino daquele link.</p>
+        <p>Note também que nesse caso o href requer ainda o sinal de cerquilha (#) antes do id do elemento que será o foco do link.</p>
+        <li><i>Tabelas no HTML</i></li>    
+        <p>Tabelas são elementos utilizados com frequência para exibir dados de forma organizada em linhas e colunas. No HTML, elas são formadas por três tags básicas: table, para delimitar a tabela; tr, para indicar as linhas; e td para formar as colunas.</p>
+        <p>Existem ainda outras três tags utilizadas para delimitar, de forma mais organizada, as partes da tabela: thead para o cabeçalho; tbody para o corpo; e tfoot para o rodapé.</p>
+        <li><i>Listas no HTML</i></li>
+        <p>Listas são elementos úteis para organizar e ordenar itens que estão relacionados de alguma forma. No HTML é possível criar três tipos de listas: ordenadas (com a tag ol), não ordenadas (com a tag ul), e de definição (por meio da tag dl).</p>
+        <p>No caso das listas ordenadas temos o atributo type que permite especificar o tipo de marcador a ser usado: números (padrão), números romanos ou letras.</p>
+        <p>Os valores permitidos para esse atributo são:
+
+            1 - números (padrão)
+            i - números romanos minúsculos
+            I - números romanos maiúsculos
+            a - letras minúsculas
+            A - letras maiúsculas</p>
+        <p>As listas de definição têm um comportamento um pouco diferente, uma vez que cada item é composto por um título (dt) e uma definição (dd), semelhante ao que ocorre em dicionários, nos quais temos os verbetes e suas definições. </p>
+    <li><i>Formulários no HTML</i></li>
+    <p>Formulários são normalmente utilizados para integrar a página HTML a algum processamento no lado servidor. Nesses casos, a página envia dados para uma aplicação (Java, PHP, .NET etc.), que os recebe, trata e retorna algum resultado.</p>
+    <p>No HTML, geralmente usamos a tag form para delimitar a área na qual se encontram os campos a serem preenchidos pelo usuário, a fim de serem enviados para processamento no back-end (enquanto a página HTML é chamada de front-end da aplicação).</p>
+</ol>
+    <h2 id="referencias">Referências</h2>
+    <ul>
+        <li><a href="https://hospedagensdesite.com.br/glossario/o-que-e-http-request/" target="_blank">HTTP</a></li>
+        <li><a href="https://www.devmedia.com.br/http-cliente-e-servidor/41215" target="_blank">Client x Server</a></li>
+        <li><a href="https://www.devmedia.com.br/html-basico-codigos-html/16596" target="_blank">Estrutura HTML</a></li>
+        <li><a href="https://www.devmedia.com.br/html-basico-codigos-html/16596" target="_blank">TAGS</a></li>
+    </ul>
+    <small><a href="#inicio">Voltar</a></small>
+</body>
+</html>
